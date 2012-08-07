@@ -16,6 +16,8 @@
 
 @property (assign, nonatomic) id <FileSelectControllerDelegate> controllerDelegate;
 
+- (void)refreshData;
+
 @end
 
 

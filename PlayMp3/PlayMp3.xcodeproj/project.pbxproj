@@ -21,6 +21,8 @@
 		507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FF915D0EDE2001E1419 /* Icon-114.png */; };
 		507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FFB15D0EDFE001E1419 /* Icon-57.png */; };
 		507B200415D10183001E1419 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B200315D10183001E1419 /* AVFoundation.framework */; };
+		507B200C15D11421001E1419 /* AddFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B200A15D11420001E1419 /* AddFileViewController.m */; };
+		507B200D15D11421001E1419 /* AddFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B200B15D11420001E1419 /* AddFileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,9 @@
 		507B1FF915D0EDE2001E1419 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
 		507B1FFB15D0EDFE001E1419 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		507B200315D10183001E1419 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		507B200915D11420001E1419 /* AddFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFileViewController.h; sourceTree = "<group>"; };
+		507B200A15D11420001E1419 /* AddFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFileViewController.m; sourceTree = "<group>"; };
+		507B200B15D11420001E1419 /* AddFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,8 @@
 				507B1FDC15D0E5B6001E1419 /* ViewController.m */,
 				507B1FF015D0E76F001E1419 /* FileSelectViewController.h */,
 				507B1FF115D0E76F001E1419 /* FileSelectViewController.m */,
+				507B200915D11420001E1419 /* AddFileViewController.h */,
+				507B200A15D11420001E1419 /* AddFileViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 			children = (
 				507B1FDE15D0E5B6001E1419 /* ViewController.xib */,
 				507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */,
+				507B200B15D11420001E1419 /* AddFileViewController.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 				507B1FF415D0E76F001E1419 /* FileSelectViewController.xib in Resources */,
 				507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */,
 				507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */,
+				507B200D15D11421001E1419 /* AddFileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +249,7 @@
 				507B1FDD15D0E5B6001E1419 /* ViewController.m in Sources */,
 				507B1FF315D0E76F001E1419 /* FileSelectViewController.m in Sources */,
 				507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */,
+				507B200C15D11421001E1419 /* AddFileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

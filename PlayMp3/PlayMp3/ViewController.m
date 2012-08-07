@@ -97,7 +97,10 @@
     NSLog(@"%@",[error description]);
   else {
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
-    NSLog(@"%@",[error description]);
+    if (error) {
+      NSLog(@"%@",[error description]);
+    }
+
     [audioPlayer setNumberOfLoops:-1];
 
     playTimer = [NSTimer scheduledTimerWithTimeInterval:1.0

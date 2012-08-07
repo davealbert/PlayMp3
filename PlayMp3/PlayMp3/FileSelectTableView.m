@@ -34,6 +34,13 @@
   listOfFiles = [self importableFiles];
 }
 
+#pragma mark - User Interaction Methods
+
+- (void)refreshData {
+  listOfFiles = [self importableFiles];
+  [self reloadData];
+}
+
 #pragma mark - Supporting Methods
 
 - (NSMutableArray *)importableFiles {

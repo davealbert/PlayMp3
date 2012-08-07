@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "FileSelectTableView.h"
+#import "AddFileViewController.h"
+
 
 @protocol FileSelectReturnDelegate;
 
-@interface FileSelectViewController : UIViewController <FileSelectControllerDelegate>
+@interface FileSelectViewController : UIViewController <FileSelectControllerDelegate> {
+  AddFileViewController *addFileController;
+}
 
 @property (strong, nonatomic) IBOutlet FileSelectTableView *fileSelector;
 @property (assign, nonatomic) id <FileSelectReturnDelegate> returnDelegate;
 
 - (IBAction)cancelFileSelection:(id)sender;
+- (IBAction)addFileFromUrl:(id)sender;
 
 @end
 

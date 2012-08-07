@@ -43,6 +43,10 @@
   // e.g. self.myOutlet = nil;  
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [fileSelector refreshData];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -53,11 +57,20 @@
   [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)addFileFromUrl:(id)sender {
+  if (!addFileController) {
+    addFileController = [[AddFileViewController alloc] initWithNibName:@"AddFileViewController" bundle:nil];
+    [addFileController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+  }
+  [self presentModalViewController:addFileController animated:YES];
+}
+
 #pragma mark - Delegate Methods
 
 - (void)fileSelectTableViewSelectionMade:(FileSelectTableView *)fstv withShortName:(NSString *)shortName withLongName:(NSString *)longName {
   [[self returnDelegate] fileSelectDidFinish:self withShortName:shortName withLongName:longName];
   [self cancelFileSelection:nil];
 }
+
 
 @end
