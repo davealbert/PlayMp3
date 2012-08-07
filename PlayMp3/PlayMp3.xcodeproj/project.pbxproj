@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		507B1FCA15D0E5B6001E1419 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FC915D0E5B6001E1419 /* UIKit.framework */; };
+		507B1FCC15D0E5B6001E1419 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCB15D0E5B6001E1419 /* Foundation.framework */; };
+		507B1FCE15D0E5B6001E1419 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */; };
+		507B1FD415D0E5B6001E1419 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FD215D0E5B6001E1419 /* InfoPlist.strings */; };
+		507B1FD615D0E5B6001E1419 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FD515D0E5B6001E1419 /* main.m */; };
+		507B1FDA15D0E5B6001E1419 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FD915D0E5B6001E1419 /* AppDelegate.m */; };
+		507B1FDD15D0E5B6001E1419 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FDC15D0E5B6001E1419 /* ViewController.m */; };
+		507B1FE015D0E5B6001E1419 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FDE15D0E5B6001E1419 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		507B1FC515D0E5B6001E1419 /* PlayMp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayMp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		507B1FC915D0E5B6001E1419 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		507B1FCB15D0E5B6001E1419 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		507B1FD115D0E5B6001E1419 /* PlayMp3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayMp3-Info.plist"; sourceTree = "<group>"; };
+		507B1FD315D0E5B6001E1419 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		507B1FD515D0E5B6001E1419 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		507B1FD715D0E5B6001E1419 /* PlayMp3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayMp3-Prefix.pch"; sourceTree = "<group>"; };
+		507B1FD815D0E5B6001E1419 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		507B1FD915D0E5B6001E1419 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		507B1FDB15D0E5B6001E1419 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		507B1FDC15D0E5B6001E1419 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		507B1FDF15D0E5B6001E1419 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		507B1FC215D0E5B6001E1419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507B1FCA15D0E5B6001E1419 /* UIKit.framework in Frameworks */,
+				507B1FCC15D0E5B6001E1419 /* Foundation.framework in Frameworks */,
+				507B1FCE15D0E5B6001E1419 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		507B1FBA15D0E5B6001E1419 = {
+			isa = PBXGroup;
+			children = (
+				507B1FCF15D0E5B6001E1419 /* PlayMp3 */,
+				507B1FC815D0E5B6001E1419 /* Frameworks */,
+				507B1FC615D0E5B6001E1419 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		507B1FC615D0E5B6001E1419 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FC515D0E5B6001E1419 /* PlayMp3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507B1FC815D0E5B6001E1419 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FC915D0E5B6001E1419 /* UIKit.framework */,
+				507B1FCB15D0E5B6001E1419 /* Foundation.framework */,
+				507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		507B1FCF15D0E5B6001E1419 /* PlayMp3 */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FD815D0E5B6001E1419 /* AppDelegate.h */,
+				507B1FD915D0E5B6001E1419 /* AppDelegate.m */,
+				507B1FDB15D0E5B6001E1419 /* ViewController.h */,
+				507B1FDC15D0E5B6001E1419 /* ViewController.m */,
+				507B1FDE15D0E5B6001E1419 /* ViewController.xib */,
+				507B1FD015D0E5B6001E1419 /* Supporting Files */,
+			);
+			path = PlayMp3;
+			sourceTree = "<group>";
+		};
+		507B1FD015D0E5B6001E1419 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FD115D0E5B6001E1419 /* PlayMp3-Info.plist */,
+				507B1FD215D0E5B6001E1419 /* InfoPlist.strings */,
+				507B1FD515D0E5B6001E1419 /* main.m */,
+				507B1FD715D0E5B6001E1419 /* PlayMp3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		507B1FC415D0E5B6001E1419 /* PlayMp3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507B1FE315D0E5B6001E1419 /* Build configuration list for PBXNativeTarget "PlayMp3" */;
+			buildPhases = (
+				507B1FC115D0E5B6001E1419 /* Sources */,
+				507B1FC215D0E5B6001E1419 /* Frameworks */,
+				507B1FC315D0E5B6001E1419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayMp3;
+			productName = PlayMp3;
+			productReference = 507B1FC515D0E5B6001E1419 /* PlayMp3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		507B1FBC15D0E5B6001E1419 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Publicis;
+			};
+			buildConfigurationList = 507B1FBF15D0E5B6001E1419 /* Build configuration list for PBXProject "PlayMp3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 507B1FBA15D0E5B6001E1419;
+			productRefGroup = 507B1FC615D0E5B6001E1419 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				507B1FC415D0E5B6001E1419 /* PlayMp3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		507B1FC315D0E5B6001E1419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507B1FD415D0E5B6001E1419 /* InfoPlist.strings in Resources */,
+				507B1FE015D0E5B6001E1419 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		507B1FC115D0E5B6001E1419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507B1FD615D0E5B6001E1419 /* main.m in Sources */,
+				507B1FDA15D0E5B6001E1419 /* AppDelegate.m in Sources */,
+				507B1FDD15D0E5B6001E1419 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		507B1FD215D0E5B6001E1419 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507B1FD315D0E5B6001E1419 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		507B1FDE15D0E5B6001E1419 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507B1FDF15D0E5B6001E1419 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		507B1FE115D0E5B6001E1419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		507B1FE215D0E5B6001E1419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		507B1FE415D0E5B6001E1419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3/PlayMp3-Prefix.pch";
+				INFOPLIST_FILE = "PlayMp3/PlayMp3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		507B1FE515D0E5B6001E1419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayMp3/PlayMp3-Prefix.pch";
+				INFOPLIST_FILE = "PlayMp3/PlayMp3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		507B1FBF15D0E5B6001E1419 /* Build configuration list for PBXProject "PlayMp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507B1FE115D0E5B6001E1419 /* Debug */,
+				507B1FE215D0E5B6001E1419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507B1FE315D0E5B6001E1419 /* Build configuration list for PBXNativeTarget "PlayMp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507B1FE415D0E5B6001E1419 /* Debug */,
+				507B1FE515D0E5B6001E1419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 507B1FBC15D0E5B6001E1419 /* Project object */;
+}
