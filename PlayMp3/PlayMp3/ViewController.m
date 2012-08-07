@@ -31,4 +31,9 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)selectFile:(id)sender {
+}
+
+- (IBAction)playPause:(id)sender {
+}
 @end

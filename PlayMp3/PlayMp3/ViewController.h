@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)selectFile:(id)sender;
+- (IBAction)playPause:(id)sender;
 
 @end

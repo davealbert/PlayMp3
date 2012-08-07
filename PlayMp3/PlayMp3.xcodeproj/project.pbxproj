@@ -77,11 +77,8 @@
 		507B1FCF15D0E5B6001E1419 /* PlayMp3 */ = {
 			isa = PBXGroup;
 			children = (
-				507B1FD815D0E5B6001E1419 /* AppDelegate.h */,
-				507B1FD915D0E5B6001E1419 /* AppDelegate.m */,
-				507B1FDB15D0E5B6001E1419 /* ViewController.h */,
-				507B1FDC15D0E5B6001E1419 /* ViewController.m */,
-				507B1FDE15D0E5B6001E1419 /* ViewController.xib */,
+				507B1FE615D0E5DF001E1419 /* Classes */,
+				507B1FE915D0E5FC001E1419 /* Resources */,
 				507B1FD015D0E5B6001E1419 /* Supporting Files */,
 			);
 			path = PlayMp3;
@@ -96,6 +93,49 @@
 				507B1FD715D0E5B6001E1419 /* PlayMp3-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		507B1FE615D0E5DF001E1419 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FE715D0E5E8001E1419 /* App */,
+				507B1FE815D0E5EF001E1419 /* ViewControllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		507B1FE715D0E5E8001E1419 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FD815D0E5B6001E1419 /* AppDelegate.h */,
+				507B1FD915D0E5B6001E1419 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		507B1FE815D0E5EF001E1419 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FDB15D0E5B6001E1419 /* ViewController.h */,
+				507B1FDC15D0E5B6001E1419 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		507B1FE915D0E5FC001E1419 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FEA15D0E606001E1419 /* Xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		507B1FEA15D0E606001E1419 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FDE15D0E5B6001E1419 /* ViewController.xib */,
+			);
+			name = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
