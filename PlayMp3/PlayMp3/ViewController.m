@@ -29,6 +29,12 @@
 }
 
 - (IBAction)selectFile:(id)sender {
+  if (!fileSelectController) {
+    NSLog(@"init fileSelectController");
+    fileSelectController = [[FileSelectViewController alloc] initWithNibName:@"FileSelectViewController" bundle:nil];
+    [fileSelectController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+  }
+  [self presentModalViewController:fileSelectController animated:YES];
 }
 
 - (IBAction)playPause:(id)sender {

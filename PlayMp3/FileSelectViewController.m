@@ -13,6 +13,7 @@
 @end
 
 @implementation FileSelectViewController
+
 @synthesize fileSelector;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -26,6 +27,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+
+
 }
 
 - (void)viewDidUnload {
@@ -37,6 +40,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)cancelFileSelection:(id)sender {
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

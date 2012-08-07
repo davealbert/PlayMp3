@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet FileSelectTableView *fileSelector;
 
+- (IBAction)cancelFileSelection:(id)sender;
+
 @end
