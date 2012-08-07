@@ -15,6 +15,9 @@
 		507B1FDA15D0E5B6001E1419 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FD915D0E5B6001E1419 /* AppDelegate.m */; };
 		507B1FDD15D0E5B6001E1419 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FDC15D0E5B6001E1419 /* ViewController.m */; };
 		507B1FE015D0E5B6001E1419 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FDE15D0E5B6001E1419 /* ViewController.xib */; };
+		507B1FF315D0E76F001E1419 /* FileSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FF115D0E76F001E1419 /* FileSelectViewController.m */; };
+		507B1FF415D0E76F001E1419 /* FileSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */; };
+		507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FF715D0E810001E1419 /* FileSelectTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,11 @@
 		507B1FDB15D0E5B6001E1419 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		507B1FDC15D0E5B6001E1419 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		507B1FDF15D0E5B6001E1419 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		507B1FF015D0E76F001E1419 /* FileSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSelectViewController.h; path = ../FileSelectViewController.h; sourceTree = "<group>"; };
+		507B1FF115D0E76F001E1419 /* FileSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileSelectViewController.m; path = ../FileSelectViewController.m; sourceTree = "<group>"; };
+		507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FileSelectViewController.xib; path = ../FileSelectViewController.xib; sourceTree = "<group>"; };
+		507B1FF615D0E810001E1419 /* FileSelectTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSelectTableView.h; sourceTree = "<group>"; };
+		507B1FF715D0E810001E1419 /* FileSelectTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSelectTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		507B1FE615D0E5DF001E1419 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				507B1FF515D0E7F2001E1419 /* SubClasses */,
 				507B1FE715D0E5E8001E1419 /* App */,
 				507B1FE815D0E5EF001E1419 /* ViewControllers */,
 			);
@@ -118,6 +127,8 @@
 			children = (
 				507B1FDB15D0E5B6001E1419 /* ViewController.h */,
 				507B1FDC15D0E5B6001E1419 /* ViewController.m */,
+				507B1FF015D0E76F001E1419 /* FileSelectViewController.h */,
+				507B1FF115D0E76F001E1419 /* FileSelectViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -134,8 +145,18 @@
 			isa = PBXGroup;
 			children = (
 				507B1FDE15D0E5B6001E1419 /* ViewController.xib */,
+				507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */,
 			);
 			name = Xib;
+			sourceTree = "<group>";
+		};
+		507B1FF515D0E7F2001E1419 /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				507B1FF615D0E810001E1419 /* FileSelectTableView.h */,
+				507B1FF715D0E810001E1419 /* FileSelectTableView.m */,
+			);
+			name = SubClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +212,7 @@
 			files = (
 				507B1FD415D0E5B6001E1419 /* InfoPlist.strings in Resources */,
 				507B1FE015D0E5B6001E1419 /* ViewController.xib in Resources */,
+				507B1FF415D0E76F001E1419 /* FileSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +226,8 @@
 				507B1FD615D0E5B6001E1419 /* main.m in Sources */,
 				507B1FDA15D0E5B6001E1419 /* AppDelegate.m in Sources */,
 				507B1FDD15D0E5B6001E1419 /* ViewController.m in Sources */,
+				507B1FF315D0E76F001E1419 /* FileSelectViewController.m in Sources */,
+				507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
