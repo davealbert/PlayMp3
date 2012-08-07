@@ -15,6 +15,8 @@
 @implementation AddFileViewController
 @synthesize url;
 
+#pragma mark - View Lifecycle
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
@@ -39,17 +41,24 @@
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - User Interaction Methods
+
 - (IBAction)cancel:(id)sender {
   [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)saveAndAdd:(id)sender {
   [url resignFirstResponder];
+  if (![[url text] hasPrefix:@"http://"]) {
+    [url setText:[NSString stringWithFormat:@"http://%@",[url text]]];
+  }
   alert = [[UIAlertView alloc] initWithTitle:@"Downloading" message:@"please wait..." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
   [alert show];
 
   [self performSelector:@selector(downloadFile) withObject:self afterDelay:1.0f];
 }
+
+#pragma mark - supporting Methods
 
 - (void)downloadFile {
   NSURL  *myurl = [NSURL URLWithString:[url text]];
@@ -59,9 +68,15 @@
   connection = nil;
 }
 
+#pragma mark - Delegate Methods
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
   //  filesize = [NSNumber numberWithUnsignedInteger:[response expectedContentLength]];
+}
 
+- (void)connection:(NSURLConnection *)aConn didFailWithError:(NSError *)error {
+  [alert dismissWithClickedButtonIndex:0 animated:NO];
+  [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (void)connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)recievedData {

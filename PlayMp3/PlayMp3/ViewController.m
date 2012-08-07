@@ -15,14 +15,19 @@
 @implementation ViewController
 
 #pragma mark - View Lifecycle
+@synthesize scroll;
 @synthesize fileName;
 @synthesize plauPauseButton;
 @synthesize scrubber;
 @synthesize time;
+@synthesize hour;
+@synthesize minute;
+@synthesize second;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  [scroll setContentSize:CGSizeMake(0.0f, scroll.frame.size.height * 1.5f)];
 }
 
 - (void)viewDidUnload {
@@ -30,6 +35,10 @@
   [self setPlauPauseButton:nil];
   [self setScrubber:nil];
   [self setTime:nil];
+    [self setScroll:nil];
+  [self setHour:nil];
+  [self setMinute:nil];
+  [self setSecond:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
 }
@@ -41,6 +50,7 @@
 #pragma mark - User Interaction Methods
 
 - (IBAction)selectFile:(id)sender {
+  [self hideKb];
   if (!fileSelectController) {
     fileSelectController = [[FileSelectViewController alloc] initWithNibName:@"FileSelectViewController" bundle:nil];
     [fileSelectController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
@@ -50,6 +60,7 @@
 }
 
 - (IBAction)playPause:(id)sender {
+  [self hideKb];
   if ([audioPlayer isPlaying]) {
     [audioPlayer pause];
   } else {
@@ -64,10 +75,23 @@
 }
 
 - (IBAction)scrubbing:(UISlider *)sender {
+  [self hideKb];
   [audioPlayer setCurrentTime:([audioPlayer duration] * sender.value)];
 }
 
+- (IBAction)seek:(id)sender {
+  [self hideKb];
+  if ([hour.text intValue] + [minute.text intValue] + [second.text intValue] +0 > 0) {
+    [audioPlayer setCurrentTime:([hour.text intValue] * 3600) + ([minute.text intValue] * 60) + ([second.text intValue])];
+  }
+}
+
 #pragma mark - Supporting Methods
+
+- (void)hideKb {
+  [second becomeFirstResponder];
+  [second resignFirstResponder];
+}
 
 - (void)playTimerFire {
   if ([audioPlayer isPlaying]) {

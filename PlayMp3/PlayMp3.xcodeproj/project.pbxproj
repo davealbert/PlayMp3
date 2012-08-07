@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500D851715D1535700B5705B /* media_seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D851615D1535700B5705B /* media_seek_forward.png */; };
 		507B1FCA15D0E5B6001E1419 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FC915D0E5B6001E1419 /* UIKit.framework */; };
 		507B1FCC15D0E5B6001E1419 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCB15D0E5B6001E1419 /* Foundation.framework */; };
 		507B1FCE15D0E5B6001E1419 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500D851615D1535700B5705B /* media_seek_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = media_seek_forward.png; sourceTree = "<group>"; };
 		507B1FC515D0E5B6001E1419 /* PlayMp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayMp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		507B1FC915D0E5B6001E1419 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		507B1FCB15D0E5B6001E1419 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500D851915D1535A00B5705B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				500D851615D1535700B5705B /* media_seek_forward.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		507B1FBA15D0E5B6001E1419 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		507B1FE915D0E5FC001E1419 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				500D851915D1535A00B5705B /* Images */,
 				507B1FEA15D0E606001E1419 /* Xib */,
 			);
 			name = Resources;
@@ -234,6 +245,7 @@
 				507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */,
 				507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */,
 				507B200D15D11421001E1419 /* AddFileViewController.xib in Resources */,
+				500D851715D1535700B5705B /* media_seek_forward.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +373,7 @@
 				507B1FE515D0E5B6001E1419 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
