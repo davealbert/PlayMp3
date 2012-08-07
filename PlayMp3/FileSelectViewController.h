@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "FileSelectTableView.h"
 
-@interface FileSelectViewController : UIViewController
+@protocol FileSelectReturnDelegate;
+
+@interface FileSelectViewController : UIViewController <FileSelectControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet FileSelectTableView *fileSelector;
+@property (assign, nonatomic) id <FileSelectReturnDelegate> returnDelegate;
 
 - (IBAction)cancelFileSelection:(id)sender;
 
+@end
+
+@protocol FileSelectReturnDelegate
+- (void)fileSelectDidFinish:(FileSelectViewController *)fsvc withShortName:(NSString *)shortName withLongName:(NSString *)longName ;
 @end

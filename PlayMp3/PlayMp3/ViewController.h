@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FileSelectViewController.h"
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <FileSelectReturnDelegate>{
   FileSelectViewController *fileSelectController;
 }
 

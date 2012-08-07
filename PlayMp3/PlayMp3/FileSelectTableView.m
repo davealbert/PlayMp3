@@ -10,6 +10,8 @@
 
 @implementation FileSelectTableView
 
+@synthesize controllerDelegate;
+
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
@@ -30,7 +32,6 @@
 
 - (void)commonInit {
   listOfFiles = [self importableFiles];
-  NSLog(@"%@",listOfFiles);
 }
 
 #pragma mark - Supporting Methods
@@ -94,7 +95,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+  [[self controllerDelegate] fileSelectTableViewSelectionMade:self withShortName:[self shortName:[listOfFiles objectAtIndex:indexPath.row]] withLongName:[listOfFiles objectAtIndex:indexPath.row]];
 }
 
 

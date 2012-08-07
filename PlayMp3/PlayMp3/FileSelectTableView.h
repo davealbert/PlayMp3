@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FileSelectControllerDelegate;
+
 @interface FileSelectTableView : UITableView <UITableViewDataSource, UITableViewDelegate> {
   NSMutableArray *listOfFiles;
 }
 
+@property (assign, nonatomic) id <FileSelectControllerDelegate> controllerDelegate;
+
+@end
+
+
+@protocol FileSelectControllerDelegate
+- (void)fileSelectTableViewSelectionMade:(FileSelectTableView *)fstv withShortName:(NSString *)shortName withLongName:(NSString *)longName;
 @end
