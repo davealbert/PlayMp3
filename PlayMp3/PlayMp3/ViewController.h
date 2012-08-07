@@ -13,6 +13,8 @@
   FileSelectViewController *fileSelectController;
 }
 
+@property (strong, nonatomic) IBOutlet UILabel *fileName;
+
 - (IBAction)selectFile:(id)sender;
 - (IBAction)playPause:(id)sender;
 

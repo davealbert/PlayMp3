@@ -15,6 +15,7 @@
 @implementation ViewController
 
 #pragma mark - View Lifecycle
+@synthesize fileName;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -22,6 +23,7 @@
 }
 
 - (void)viewDidUnload {
+  [self setFileName:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
 }
@@ -48,7 +50,7 @@
 
 - (void)fileSelectDidFinish:(FileSelectViewController *)fsvc withShortName:(NSString *)shortName withLongName:(NSString *)longName {
   NSLog(@"L: %@ , S: %@",longName,shortName);
-  
+  [fileName setText:shortName];
 }
 
 @end
