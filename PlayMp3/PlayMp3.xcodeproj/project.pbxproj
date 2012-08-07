@@ -20,6 +20,7 @@
 		507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FF715D0E810001E1419 /* FileSelectTableView.m */; };
 		507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FF915D0EDE2001E1419 /* Icon-114.png */; };
 		507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FFB15D0EDFE001E1419 /* Icon-57.png */; };
+		507B200415D10183001E1419 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B200315D10183001E1419 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		507B1FF715D0E810001E1419 /* FileSelectTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSelectTableView.m; sourceTree = "<group>"; };
 		507B1FF915D0EDE2001E1419 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
 		507B1FFB15D0EDFE001E1419 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		507B200315D10183001E1419 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507B200415D10183001E1419 /* AVFoundation.framework in Frameworks */,
 				507B1FCA15D0E5B6001E1419 /* UIKit.framework in Frameworks */,
 				507B1FCC15D0E5B6001E1419 /* Foundation.framework in Frameworks */,
 				507B1FCE15D0E5B6001E1419 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +84,7 @@
 		507B1FC815D0E5B6001E1419 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				507B200315D10183001E1419 /* AVFoundation.framework */,
 				507B1FC915D0E5B6001E1419 /* UIKit.framework */,
 				507B1FCB15D0E5B6001E1419 /* Foundation.framework */,
 				507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */,
