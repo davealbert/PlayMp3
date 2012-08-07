@@ -18,6 +18,8 @@
 		507B1FF315D0E76F001E1419 /* FileSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FF115D0E76F001E1419 /* FileSelectViewController.m */; };
 		507B1FF415D0E76F001E1419 /* FileSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */; };
 		507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B1FF715D0E810001E1419 /* FileSelectTableView.m */; };
+		507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FF915D0EDE2001E1419 /* Icon-114.png */; };
+		507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 507B1FFB15D0EDFE001E1419 /* Icon-57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		507B1FF215D0E76F001E1419 /* FileSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FileSelectViewController.xib; path = ../FileSelectViewController.xib; sourceTree = "<group>"; };
 		507B1FF615D0E810001E1419 /* FileSelectTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSelectTableView.h; sourceTree = "<group>"; };
 		507B1FF715D0E810001E1419 /* FileSelectTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSelectTableView.m; sourceTree = "<group>"; };
+		507B1FF915D0EDE2001E1419 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		507B1FFB15D0EDFE001E1419 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		507B1FBA15D0E5B6001E1419 = {
 			isa = PBXGroup;
 			children = (
+				507B1FFB15D0EDFE001E1419 /* Icon-57.png */,
+				507B1FF915D0EDE2001E1419 /* Icon-114.png */,
 				507B1FCF15D0E5B6001E1419 /* PlayMp3 */,
 				507B1FC815D0E5B6001E1419 /* Frameworks */,
 				507B1FC615D0E5B6001E1419 /* Products */,
@@ -213,6 +219,8 @@
 				507B1FD415D0E5B6001E1419 /* InfoPlist.strings in Resources */,
 				507B1FE015D0E5B6001E1419 /* ViewController.xib in Resources */,
 				507B1FF415D0E76F001E1419 /* FileSelectViewController.xib in Resources */,
+				507B1FFA15D0EDE2001E1419 /* Icon-114.png in Resources */,
+				507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
