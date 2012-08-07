@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FileSelectTableView : UITableView
+@interface FileSelectTableView : UITableView <UITableViewDataSource, UITableViewDelegate> {
+  NSMutableArray *listOfFiles;
+}
 
 @end
