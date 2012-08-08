@@ -35,7 +35,7 @@
   [self setPlauPauseButton:nil];
   [self setScrubber:nil];
   [self setTime:nil];
-    [self setScroll:nil];
+  [self setScroll:nil];
   [self setHour:nil];
   [self setMinute:nil];
   [self setSecond:nil];
