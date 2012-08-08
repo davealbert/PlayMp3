@@ -116,13 +116,12 @@
   NSError *error;
   audioPlayer  = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 
-
   if (audioPlayer == nil)
-    NSLog(@"%@",[error description]);
+    [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
   else {
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
     if (error) {
-      NSLog(@"%@",[error description]);
+      [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
 
     [audioPlayer setNumberOfLoops:-1];

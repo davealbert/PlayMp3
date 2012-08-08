@@ -42,7 +42,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   [self.newsWebView loadData:webData MIMEType:@"text/html" textEncodingName:@"utf-8" baseURL:nil];
-  
+
   return YES;
 }
 
@@ -50,13 +50,12 @@
   [self dismissModalViewControllerAnimated:YES];
 }
 
-
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-//  NSLog(@"Start");
+  //  Start
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-//  NSLog(@"Finish");
+  //  Finish
 }
 
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {

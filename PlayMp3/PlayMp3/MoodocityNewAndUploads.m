@@ -60,7 +60,7 @@
 
 -(void)connection:(NSURLConnection_webdata*)connection didFailWithError:(NSError*)error {
   // Handle the error properly
-  NSLog(@"error");
+  [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection_webdata *)connection {

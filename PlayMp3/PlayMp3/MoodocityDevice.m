@@ -17,17 +17,14 @@
   if (self) {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [self setDeviceId:[[prefs stringForKey:@"moodocityDeviceID"] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    NSLog(@"First: %@",[self deviceId]);
     if (![self deviceId]) {
       [self setDeviceId:[self genRandStringLength:20]];
       [prefs setObject:[self deviceId] forKey:@"moodocityDeviceID"];
       [prefs synchronize];
-      NSLog(@"Second: %@",[self deviceId]);
     }
   }
   return self;
 }
-
 
 -(NSString *) genRandStringLength:(int)len {
   NSString *letters = @"ABCDEF0123456789";

@@ -23,10 +23,6 @@
   [self.window makeKeyAndVisible];
 
   news = [[MoodocityNewAndUploads alloc] initWithDelegate:self];
-  if (![news loading]) {
-    NSLog(@"Error: News loading too quick.");
-  }
-  
   return YES;
 }
 

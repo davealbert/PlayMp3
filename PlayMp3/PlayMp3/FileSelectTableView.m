@@ -52,7 +52,7 @@
   NSError *error;
   NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:publicDocumentsDir error:&error];
   if (files == nil) {
-    NSLog(@"Error reading contents of documents directory: %@", [error localizedDescription]);
+    [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     return retval;
   }
 
