@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		500D851715D1535700B5705B /* media_seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D851615D1535700B5705B /* media_seek_forward.png */; };
+		500D852515D23C4600B5705B /* MoodocityDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D852415D23C4600B5705B /* MoodocityDevice.m */; };
+		500D852A15D258D200B5705B /* MoodocityNewAndUploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D852915D258D200B5705B /* MoodocityNewAndUploads.m */; };
+		500D852D15D25BCC00B5705B /* NSURLConnection+webdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D852C15D25BCC00B5705B /* NSURLConnection+webdata.m */; };
+		500D853015D25C8E00B5705B /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D852F15D25C8D00B5705B /* NewsViewController.m */; };
+		500D853315D25C9900B5705B /* NewsViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500D853115D25C9800B5705B /* NewsViewController-iPad.xib */; };
+		500D853415D25C9900B5705B /* NewsViewController-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500D853215D25C9800B5705B /* NewsViewController-iPhone.xib */; };
+		500D853715D2615700B5705B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D853615D2615700B5705B /* close.png */; };
 		507B1FCA15D0E5B6001E1419 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FC915D0E5B6001E1419 /* UIKit.framework */; };
 		507B1FCC15D0E5B6001E1419 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCB15D0E5B6001E1419 /* Foundation.framework */; };
 		507B1FCE15D0E5B6001E1419 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B1FCD15D0E5B6001E1419 /* CoreGraphics.framework */; };
@@ -28,6 +35,17 @@
 
 /* Begin PBXFileReference section */
 		500D851615D1535700B5705B /* media_seek_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = media_seek_forward.png; sourceTree = "<group>"; };
+		500D852315D23C4600B5705B /* MoodocityDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodocityDevice.h; sourceTree = "<group>"; };
+		500D852415D23C4600B5705B /* MoodocityDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodocityDevice.m; sourceTree = "<group>"; };
+		500D852815D258D200B5705B /* MoodocityNewAndUploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodocityNewAndUploads.h; sourceTree = "<group>"; };
+		500D852915D258D200B5705B /* MoodocityNewAndUploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodocityNewAndUploads.m; sourceTree = "<group>"; };
+		500D852B15D25BCB00B5705B /* NSURLConnection+webdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+webdata.h"; sourceTree = "<group>"; };
+		500D852C15D25BCC00B5705B /* NSURLConnection+webdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+webdata.m"; sourceTree = "<group>"; };
+		500D852E15D25C8D00B5705B /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		500D852F15D25C8D00B5705B /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		500D853115D25C9800B5705B /* NewsViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NewsViewController-iPad.xib"; sourceTree = "<group>"; };
+		500D853215D25C9800B5705B /* NewsViewController-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NewsViewController-iPhone.xib"; sourceTree = "<group>"; };
+		500D853615D2615700B5705B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		507B1FC515D0E5B6001E1419 /* PlayMp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayMp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		507B1FC915D0E5B6001E1419 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		507B1FCB15D0E5B6001E1419 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +93,32 @@
 				500D851615D1535700B5705B /* media_seek_forward.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		500D852715D258A500B5705B /* Moodocity Package */ = {
+			isa = PBXGroup;
+			children = (
+				500D852315D23C4600B5705B /* MoodocityDevice.h */,
+				500D852415D23C4600B5705B /* MoodocityDevice.m */,
+				500D852815D258D200B5705B /* MoodocityNewAndUploads.h */,
+				500D852915D258D200B5705B /* MoodocityNewAndUploads.m */,
+				500D852B15D25BCB00B5705B /* NSURLConnection+webdata.h */,
+				500D852C15D25BCC00B5705B /* NSURLConnection+webdata.m */,
+				500D853515D25C9E00B5705B /* NewsViewController */,
+			);
+			name = "Moodocity Package";
+			sourceTree = "<group>";
+		};
+		500D853515D25C9E00B5705B /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				500D852E15D25C8D00B5705B /* NewsViewController.h */,
+				500D852F15D25C8D00B5705B /* NewsViewController.m */,
+				500D853115D25C9800B5705B /* NewsViewController-iPad.xib */,
+				500D853215D25C9800B5705B /* NewsViewController-iPhone.xib */,
+				500D853615D2615700B5705B /* close.png */,
+			);
+			name = NewsViewController;
 			sourceTree = "<group>";
 		};
 		507B1FBA15D0E5B6001E1419 = {
@@ -184,6 +228,7 @@
 			children = (
 				507B1FF615D0E810001E1419 /* FileSelectTableView.h */,
 				507B1FF715D0E810001E1419 /* FileSelectTableView.m */,
+				500D852715D258A500B5705B /* Moodocity Package */,
 			);
 			name = SubClasses;
 			sourceTree = "<group>";
@@ -246,6 +291,9 @@
 				507B1FFC15D0EDFE001E1419 /* Icon-57.png in Resources */,
 				507B200D15D11421001E1419 /* AddFileViewController.xib in Resources */,
 				500D851715D1535700B5705B /* media_seek_forward.png in Resources */,
+				500D853315D25C9900B5705B /* NewsViewController-iPad.xib in Resources */,
+				500D853415D25C9900B5705B /* NewsViewController-iPhone.xib in Resources */,
+				500D853715D2615700B5705B /* close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +310,10 @@
 				507B1FF315D0E76F001E1419 /* FileSelectViewController.m in Sources */,
 				507B1FF815D0E810001E1419 /* FileSelectTableView.m in Sources */,
 				507B200C15D11421001E1419 /* AddFileViewController.m in Sources */,
+				500D852515D23C4600B5705B /* MoodocityDevice.m in Sources */,
+				500D852A15D258D200B5705B /* MoodocityNewAndUploads.m in Sources */,
+				500D852D15D25BCC00B5705B /* NSURLConnection+webdata.m in Sources */,
+				500D853015D25C8E00B5705B /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

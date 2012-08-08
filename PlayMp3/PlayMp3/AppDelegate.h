@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoodocityNewAndUploads.h"
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, MoodocityNewAndUploadsDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
