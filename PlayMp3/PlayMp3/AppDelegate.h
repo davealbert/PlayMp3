@@ -11,7 +11,9 @@
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, MoodocityNewAndUploadsDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, MoodocityNewAndUploadsDelegate> {
+  MoodocityNewAndUploads *news;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

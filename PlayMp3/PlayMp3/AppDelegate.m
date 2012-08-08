@@ -22,12 +22,16 @@
   self.window.rootViewController = self.viewController;
   [self.window makeKeyAndVisible];
 
-  MoodocityNewAndUploads *news = [[MoodocityNewAndUploads alloc] initWithDelegate:self];
+  news = [[MoodocityNewAndUploads alloc] initWithDelegate:self];
   if (![news loading]) {
     NSLog(@"Error: News loading too quick.");
   }
   
   return YES;
+}
+
+-(void)applicationWillEnterForeground:(UIApplication *)application {
+  [news getNews];
 }
 
 -(void)moodocityNewsDidFinishLoading:(NewsViewController *)newsViewController {

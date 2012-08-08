@@ -23,6 +23,7 @@
 @property (assign, nonatomic) BOOL loading;
 
 - (id)initWithDelegate:(id)delegate;
+- (void)getNews;
 
 @end
 
