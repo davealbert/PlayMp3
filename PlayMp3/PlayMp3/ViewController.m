@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  playList = [[PlayList alloc] init];
   [scroll setContentSize:CGSizeMake(0.0f, scroll.frame.size.height * 1.5f)];
 }
 
@@ -86,6 +87,23 @@
   }
 }
 
+- (IBAction)selectPlayList:(id)sender {
+  [playList setUsingThisPlaylist:YES];
+  [self playAudio:[playList currentSongInPLaylist]];
+}
+
+- (IBAction)previousSong:(id)sender {
+  if ([playList usingThisPlaylist]) {
+    [self playAudio:[playList previousSongInPLaylist]];
+  }
+}
+
+- (IBAction)nextSong:(id)sender {
+  if ([playList usingThisPlaylist]) {
+    [self playAudio:[playList nextSongInPLaylist]];
+  }
+}
+
 #pragma mark - Supporting Methods
 
 - (void)hideKb {
@@ -104,18 +122,10 @@
   }
 }
 
-#pragma mark - Delegate Methods
-
-- (void)fileSelectDidFinish:(FileSelectViewController *)fsvc withShortName:(NSString *)shortName withLongName:(NSString *)longName {
-  audioPlayer = nil;
-  [playTimer invalidate];
-  playTimer = nil;
-  [fileName setText:shortName];
-  NSURL *url = [NSURL fileURLWithPath:longName];
-
+-(void)playAudio:(NSURL *)url {
   NSError *error;
   audioPlayer  = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-
+  [audioPlayer setDelegate:self];
   if (audioPlayer == nil)
     [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
   else {
@@ -124,7 +134,12 @@
       [[[UIAlertView alloc]initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
 
-    [audioPlayer setNumberOfLoops:-1];
+    if ([playList usingThisPlaylist]) {
+      [audioPlayer setNumberOfLoops:0];
+    } else {
+      [audioPlayer setNumberOfLoops:-1];
+    }
+
 
     playTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                  target:self
@@ -132,7 +147,28 @@
                                                userInfo:nil
                                                 repeats:YES];
     [audioPlayer play];
+    if ([playList usingThisPlaylist]) {
+      [fileName setText:[playList nameOfSongPlaying]];
+    }
     [plauPauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+  }
+}
+
+#pragma mark - Delegate Methods
+
+- (void)fileSelectDidFinish:(FileSelectViewController *)fsvc withShortName:(NSString *)shortName withLongName:(NSString *)longName {
+  [playList setUsingThisPlaylist:NO];
+  audioPlayer = nil;
+  [playTimer invalidate];
+  playTimer = nil;
+  [fileName setText:shortName];
+  NSURL *url = [NSURL fileURLWithPath:longName];
+  [self playAudio:url];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+  if ([playList usingThisPlaylist]) {
+    [self playAudio:[playList nextSongInPLaylist]];
   }
 }
 

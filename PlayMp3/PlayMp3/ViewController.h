@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "FileSelectViewController.h"
+#import "PlayList.h"
 
-@interface ViewController : UIViewController <FileSelectReturnDelegate,UITextFieldDelegate>{
+@interface ViewController : UIViewController <FileSelectReturnDelegate,UITextFieldDelegate,AVAudioPlayerDelegate>{
   FileSelectViewController *fileSelectController;
   AVAudioPlayer *audioPlayer;
   NSTimer *playTimer;
+  PlayList *playList;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
@@ -31,5 +33,9 @@
 - (IBAction)playPause:(id)sender;
 - (IBAction)scrubbing:(UISlider *)sender;
 - (IBAction)seek:(id)sender;
+- (IBAction)selectPlayList:(id)sender;
+- (IBAction)previousSong:(id)sender;
+- (IBAction)nextSong:(id)sender;
+
 
 @end
