@@ -13,6 +13,7 @@
 @end
 
 @implementation AddFileViewController
+@synthesize favoriteButton;
 @synthesize url;
 
 #pragma mark - View Lifecycle
@@ -25,6 +26,16 @@
   return self;
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+  [UIView animateWithDuration:0.5f animations:^{
+    [[self favoriteButton] setAlpha:0.0f];
+  }];
+  [[self favoriteButton] setHidden:YES];
+}
+- (void)viewWillAppear:(BOOL)animated {
+  moodGetUrl = [[MoodocityGetURL alloc] initWithDelegate:self];  
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
@@ -32,6 +43,7 @@
 
 - (void)viewDidUnload {
   [self setUrl:nil];
+  [self setFavoriteButton:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
@@ -54,15 +66,18 @@
   }
   alert = [[UIAlertView alloc] initWithTitle:@"Downloading" message:@"please wait..." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
   [alert show];
-
+  
   [self performSelector:@selector(downloadFile) withObject:self afterDelay:1.0f];
+}
+
+- (IBAction)showFavorites:(id)sender {
 }
 
 #pragma mark - supporting Methods
 
 - (void)downloadFile {
   NSURL  *myurl = [NSURL URLWithString:[url text]];
-
+  
   NSURLRequest *theRequest = [NSURLRequest requestWithURL:myurl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0];
   connection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   connection = nil;
@@ -95,9 +110,9 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSArray *split = [[url text] componentsSeparatedByString:@"/"];
     NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,[split objectAtIndex:([split count] - 1)]];
-
+    
     [data writeToFile:filePath atomically:YES];
-
+    
     connection=nil;
     data=nil;
   }
@@ -108,4 +123,20 @@
 - (void)alertViewCancel:(UIAlertView *)alertView {
   [connection cancel];  
 }
+
+- (void)moodocityGetUrlDidFinish:(MoodocityGetURL *)moodocityUrl withConnection:(NSURLConnection_webdata *)conn{
+  if (![conn webdata]) {
+    // Just checking for connection
+    if ([moodGetUrl isOnline]) {
+      [[self favoriteButton] setAlpha:0.0f];
+      [[self favoriteButton] setHidden:NO];
+      [UIView animateWithDuration:0.5f animations:^{
+        [[self favoriteButton] setAlpha:1.0f];
+      }];
+    } else {
+      [[self favoriteButton] setHidden:YES];
+    }
+  }
+}
+
 @end
