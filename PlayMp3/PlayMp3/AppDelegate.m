@@ -27,7 +27,7 @@
 }
 
 -(void)applicationWillEnterForeground:(UIApplication *)application {
-  [news getNews];
+//  [news getNews];
 }
 
 -(void)moodocityNewsDidFinishLoading:(NewsViewController *)newsViewController {

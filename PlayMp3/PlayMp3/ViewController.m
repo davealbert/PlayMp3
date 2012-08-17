@@ -104,7 +104,74 @@
   }
 }
 
+- (IBAction)lock:(id)sender {
+  [[ UIApplication sharedApplication ] setIdleTimerDisabled: YES ];
+  subView = [[UIView alloc] initWithFrame:self.view.bounds];
+  [subView setBackgroundColor:[UIColor blackColor]];
+  
+  
+  UIImageView *slideBg = [[UIImageView alloc] initWithFrame:CGRectMake(5, 364, 305, 54)];
+  [slideBg setImage:[UIImage imageNamed:@"SlideToStopBar.png"]];
+  [subView addSubview:slideBg];
+  
+  label = [[UILabel alloc] initWithFrame:CGRectMake(100, 380, 200, 23)];
+  [label setBackgroundColor:[UIColor clearColor]];
+  [label setTextColor:[UIColor lightGrayColor]];
+  [label setFont:[UIFont fontWithName:@"Helvetica" size:24.0]];
+  label.text = @"slide to unlock";
+  [subView addSubview:label];
+  
+  
+  mySlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 380, 295, 23)];
+  [mySlider setValue:0.00];
+  [mySlider addTarget:self action:@selector(unlock:) forControlEvents:UIControlEventTouchUpInside];
+  [mySlider addTarget:self action:@selector(fadeLabel) forControlEvents:UIControlEventValueChanged];
+  [mySlider setThumbImage: [UIImage imageNamed:@"SlideToStop.png"] forState:UIControlStateNormal];
+  UIImage *stetchLeftTrack= [[UIImage imageNamed:@"Nothing.png"]
+                             stretchableImageWithLeftCapWidth:30.0 topCapHeight:0.0];
+	UIImage *stetchRightTrack= [[UIImage imageNamed:@"Nothing.png"]
+                              stretchableImageWithLeftCapWidth:30.0 topCapHeight:0.0];
+  
+  [mySlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+	[mySlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+  [subView addSubview:mySlider];
+  
+  
+  [subView addSubview:fileName];
+  [subView addSubview:time];
+  
+  [fileName setCenter:CGPointMake(fileName.center.x, fileName
+                                  .center.y + 100)];
+  [time setCenter:CGPointMake(time.center.x, time.center.y - 200)];
+  
+  [self.view addSubview:subView];
+}
+
+- (IBAction)unlock:(id)sender{
+  if (mySlider.value > .95) {
+    [[ UIApplication sharedApplication ] setIdleTimerDisabled: NO ];
+    [fileName setCenter:CGPointMake(fileName.center.x, fileName.center.y - 100)];
+    [time setCenter:CGPointMake(time.center.x, time.center.y + 200)];
+    
+    [self.view addSubview:time];
+    [self.view addSubview:fileName];
+    [self removeSubView];
+  } else {
+    [mySlider setValue:0.00];
+    label.alpha = 1;
+  }
+}
+
+
 #pragma mark - Supporting Methods
+
+- (void) fadeLabel{
+  label.alpha = 1 - mySlider.value;
+}
+
+- (void) removeSubView{
+  [subView removeFromSuperview];
+}
 
 - (void)hideKb {
   [second becomeFirstResponder];

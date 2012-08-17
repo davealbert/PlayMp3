@@ -16,6 +16,12 @@
   AVAudioPlayer *audioPlayer;
   NSTimer *playTimer;
   PlayList *playList;
+  
+  
+  // Lock Screen TODO Build it properly 
+  UIView *subView;
+  UISlider *mySlider;
+  UILabel *label;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
@@ -36,6 +42,7 @@
 - (IBAction)selectPlayList:(id)sender;
 - (IBAction)previousSong:(id)sender;
 - (IBAction)nextSong:(id)sender;
+- (IBAction)lock:(id)sender;
 
 
 @end
