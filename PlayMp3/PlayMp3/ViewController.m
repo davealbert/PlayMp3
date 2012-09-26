@@ -153,8 +153,8 @@
     [fileName setCenter:CGPointMake(fileName.center.x, fileName.center.y - 100)];
     [time setCenter:CGPointMake(time.center.x, time.center.y + 200)];
     
-    [self.view addSubview:time];
-    [self.view addSubview:fileName];
+    [self.scroll addSubview:time];
+    [self.scroll addSubview:fileName];
     [self removeSubView];
   } else {
     [mySlider setValue:0.00];

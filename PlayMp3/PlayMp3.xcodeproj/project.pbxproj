@@ -42,6 +42,7 @@
 		507B200415D10183001E1419 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507B200315D10183001E1419 /* AVFoundation.framework */; };
 		507B200C15D11421001E1419 /* AddFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507B200A15D11420001E1419 /* AddFileViewController.m */; };
 		507B200D15D11421001E1419 /* AddFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507B200B15D11420001E1419 /* AddFileViewController.xib */; };
+		50B36F871612CE5100B97B7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B36F861612CE5100B97B7E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		507B200915D11420001E1419 /* AddFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFileViewController.h; sourceTree = "<group>"; };
 		507B200A15D11420001E1419 /* AddFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFileViewController.m; sourceTree = "<group>"; };
 		507B200B15D11420001E1419 /* AddFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFileViewController.xib; sourceTree = "<group>"; };
+		50B36F861612CE5100B97B7E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		507B1FBA15D0E5B6001E1419 = {
 			isa = PBXGroup;
 			children = (
+				50B36F861612CE5100B97B7E /* Default-568h@2x.png */,
 				507B1FFB15D0EDFE001E1419 /* Icon-57.png */,
 				507B1FF915D0EDE2001E1419 /* Icon-114.png */,
 				507B1FCF15D0E5B6001E1419 /* PlayMp3 */,
@@ -340,6 +343,7 @@
 				501FE78F15DE3A250077F1F3 /* Nothing.png in Resources */,
 				501FE79015DE3A250077F1F3 /* SlideToStopBar.png in Resources */,
 				501FE79115DE3A250077F1F3 /* SlideToStop.png in Resources */,
+				50B36F871612CE5100B97B7E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

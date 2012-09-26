@@ -72,7 +72,7 @@
   for (NSString *file in files) {
     if ([file.pathExtension compare:@"mp3" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
       
-      if ([file hasPrefix:@"lbCD"]) {  // TODO: Find a way to create prefix play lists?
+      if ([file hasPrefix:@"lbArgue"]) {  // TODO: Find a way to create prefix play lists?
         NSString *fullPath = [publicDocumentsDir stringByAppendingPathComponent:file];
         [retval addObject:fullPath];        
       }
