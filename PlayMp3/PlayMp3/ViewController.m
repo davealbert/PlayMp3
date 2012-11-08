@@ -184,7 +184,13 @@
     int currentHours = (currentPlaybackTime / 3600);
     int currentMinutes = ((currentPlaybackTime / 60) - currentHours*60);
     int currentSeconds = (currentPlaybackTime % 60);
-    [time setText:[NSString stringWithFormat:@"%i:%02d:%02d", currentHours, currentMinutes, currentSeconds]];
+    
+    long totalTime = [audioPlayer duration];
+    int totalHours = (totalTime / 3600);
+    int totalMinutes = ((totalTime / 60) - totalHours*60);
+    int totalSeconds = (totalTime % 60);
+    
+    [time setText:[NSString stringWithFormat:@"%i:%02d:%02d - %i:%02d:%02d", currentHours, currentMinutes, currentSeconds, totalHours, totalMinutes, totalSeconds]];
     [scrubber setValue:([audioPlayer currentTime]/[audioPlayer duration])];
   }
 }
